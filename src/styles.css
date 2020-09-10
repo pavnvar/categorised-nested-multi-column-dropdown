@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+/*bootstrap grid systems throws some margin*/
+.productVersions .p-listbox-header{
+  border-bottom: 0px !important;
+
+}
+
+.versionBuild .p-listbox-header{
+  border-bottom: 0px !important;
+
+}
+/*bootstrap grid system code end */
+
+/*Hide scroll bar but let scrolling happen*/
+.productVersions ::-webkit-scrollbar { 
+  display: none; 
+}
+
+.productVersions .p-listbox-list-wrapper{
+ 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.versionBuild ::-webkit-scrollbar { 
+  display: none; 
+}
+
+.versionBuild .p-listbox-list-wrapper{
+ 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/*Scroll bar code end*/
+
+
+
+/*Both sibling list box should have same height(which is maximum of both)*/
+.versionBuild{
+  min-height: 100%;
+}
+.productVersions{
+  min-height: 100%;
+}
+/*Same height styles end here*/
+
+
+.versionBuild .p-highlight{
+  background-color:#829A37!important;
+}
+
+.productVersions .p-highlight{
+  background-color:#829A37!important ;
+}

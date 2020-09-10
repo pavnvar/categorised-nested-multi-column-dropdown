@@ -1,0 +1,49 @@
+<div class="row" style="margin-top: 15px; margin-left: 5vw;">
+    <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;padding-right: 0px;">
+
+        <button #btn  type="button" label=" "  
+        [ngClass]="{'build_btn_on':!button_toggle,'build_btn_off':button_toggle}"
+        pButton style="width: 100%;" icons="pi pi-angle-down" (click)="toggleListBox(event)">
+        XYZ {{selectedProVersion}} <i class="pi dropdown_icon" 
+        [ngClass]="{'pi-angle-down':!button_toggle,'pi-angle-up':button_toggle}"></i> </button>        
+
+
+    </div>
+</div>
+<div #menu class="row prod-div" style="margin-top: 0px; margin-left: 5vw;" [ngClass]="{'dis-hid':!button_toggle}">
+    
+    <div class="col-sm-8 col-md-8 col-lg-8 nopadding">
+        <p-listbox [options]="proVersionArray" [(ngModel)]="selectedProVersion" 
+        styleClass="productVersions" [listStyle]="{'max-height':'250px'}" 
+        (onChange)="ChangeparentDropdown($event)">
+            <p-header style="font-weight: 600;"> 
+                Product Version
+            </p-header>
+            <ng-template let-prov pTemplate="item">
+                
+                    <span style="float:left;">{{prov.label}}</span>
+                    <i class="pi pi-angle-right dropdown_icon"></i>
+                
+            </ng-template>
+
+        </p-listbox>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 nopadding">
+        <p-listbox  [options]="buildVersionArray" [(ngModel)]="selectedbuildVersion" 
+        styleClass="versionBuild" [listStyle]="{'max-height':'250px'}"
+        (onChange)="ChangechildDropdown($event)">
+            <p-header style="font-weight: 600;">
+                Version Build
+            </p-header>
+            <ng-template let-buildVersion pTemplate="item1">
+                
+                <span style="float:left;">{{buildVersion.label}}</span>
+                
+            
+            </ng-template>
+
+        </p-listbox>
+    </div>
+
+
+</div>

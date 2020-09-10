@@ -1,0 +1,27 @@
+
+.listbox-20rem{
+    width: 20px;
+}
+.nopadding{
+    padding: 0 !important;
+   margin: 0 !important;
+   
+}
+.dis-hid{
+    display: none;
+}
+.build_btn_on{
+    background-color: #829A37!important;
+    color:white!important;
+}
+
+.build_btn_off{
+    background-color: white!important;
+    color:#829A37!important;
+}
+.dropdown_icon{
+    position: absolute;
+    right: 0;
+}
+
+
