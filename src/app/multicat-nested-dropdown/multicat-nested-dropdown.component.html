@@ -1,4 +1,4 @@
-<div class="row" style="margin-top: 15px; margin-left: 5vw;">
+<div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;padding-right: 0px;">
 
         <button #btn  type="button" label=" "  
@@ -10,11 +10,11 @@
 
     </div>
 </div>
-<div #menu class="row prod-div" style="margin-top: 0px; margin-left: 5vw;" [ngClass]="{'dis-hid':!button_toggle}">
+<div #menu class="row prod-div" [ngClass]="{'dis-hid':!button_toggle}">
     
     <div class="col-sm-8 col-md-8 col-lg-8 nopadding">
         <p-listbox [options]="proVersionArray" [(ngModel)]="selectedProVersion" 
-        styleClass="productVersions" [listStyle]="{'max-height':'250px'}" 
+        styleClass="productVersions" [listStyle]="{'max-height':'16vw'}" 
         (onChange)="ChangeparentDropdown($event)">
             <p-header style="font-weight: 600;"> 
                 Product Version
@@ -30,7 +30,7 @@
     </div>
     <div class="col-sm-4 col-md-4 col-lg-4 nopadding">
         <p-listbox  [options]="buildVersionArray" [(ngModel)]="selectedbuildVersion" 
-        styleClass="versionBuild" [listStyle]="{'max-height':'250px'}"
+        styleClass="versionBuild" [listStyle]="{'max-height':'16vw'}"
         (onChange)="ChangechildDropdown($event)">
             <p-header style="font-weight: 600;">
                 Version Build
